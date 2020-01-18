@@ -4,7 +4,7 @@ import './App.css';
 import { CirclePicker } from 'react-color';
 
 function App() {
-  const [color,setColor] = useState('#000000')
+  const [color,setColor] = useState('#ffffff')
   const handleChange = (color) => {
     setColor(color.hex)
   }
