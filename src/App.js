@@ -1,23 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Logo from './Logo';
 import './App.css';
+import { CirclePicker } from 'react-color';
 
 function App() {
+  const [color,setColor] = useState('#000000')
+  const handleChange = (color) => {
+    setColor(color.hex)
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        <Logo color = {color} />
+        <CirclePicker onChange={handleChange}/>
       </header>
     </div>
   );
