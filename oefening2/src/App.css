@@ -44,6 +44,8 @@ ul{
   max-height: 400px;
   overflow: auto;
   margin: 0;
+  text-align: left;
+  cursor: pointer;
 }
 .selected{
   background-color: #61dafb;
